@@ -1,0 +1,23 @@
+{% extends 'clientes/base.html' %}
+{% load bootstrap %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h1>Editar Cliente:</h1>
+            <form method="POST">
+                {% csrf_token %}
+
+                {{form|bootstrap}}
+
+                <input type="submit" value="Enviar" class="btn  btn-block btn-primary" />
+                <a href="{% url 'lista_de_clientes' %}" class="btn btn-block btn-secondary">Voltar</a>
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

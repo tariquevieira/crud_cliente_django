@@ -1,0 +1,23 @@
+{% extends 'clientes/base.html' %}
+{% load bootstrap %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h1>Tem certeza que deseja excluir o cliente {{cliente.nome}}?</h1>
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="text-center">
+
+                    <input type="submit" value="Sim" class="btn  btn-danger" />
+                    <a href="{% url 'lista_de_clientes' %}" class="btn  btn-secondary">Voltar</a>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

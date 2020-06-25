@@ -1,0 +1,11 @@
+#lista_menu{
+
+   list-style:none;
+
+}
+body {
+    background-color: ghostwhite;
+}
+.linhas:hover {
+    background-color: #a4cda4;
+}
